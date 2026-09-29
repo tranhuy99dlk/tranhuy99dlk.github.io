@@ -1,35 +1,59 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hồ sơ năng lực - IT Solution Consultant</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: system-ui, -apple-system, sans-serif; }
-        .header {
-            height: 50px; background: #24292e; color: white;
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-        .header h1 { font-size: 18px; font-weight: 500; margin: 0; }
-        .btn-download {
-            background: #2ea44f; color: white; text-decoration: none;
-            padding: 8px 16px; border-radius: 6px; font-size: 14px; font-weight: bold;
-            transition: background 0.2s;
-        }
-        .btn-download:hover { background: #2c974b; }
-        iframe { width: 100%; height: calc(100% - 50px); border: none; display: block; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  index.html — KHUNG TRANG + SEO.
+  Nội dung CV KHÔNG nằm ở đây mà ở cv-data.js.
+  Phần <head> dưới đây là thứ Google, LinkedIn, Zalo đọc khi hiển thị link,
+  vì chúng không chạy JavaScript. Chỉ sửa khi đổi chức danh / đổi địa chỉ web.
+-->
+<title>Trần Đình Huy — Tư vấn Chuyển đổi số · Business Analyst · Quản lý Dự án CNTT</title>
+<meta name="description" content="Trần Đình Huy — Tư vấn giải pháp chuyển đổi số, Business Analyst và Quản lý dự án CNTT với 4+ năm kinh nghiệm HealthTech (HIS, EMR, LIS, RIS/PACS, BHYT) và GovTech tại Đà Nẵng.">
+<meta name="author" content="Trần Đình Huy">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A1F44">
+
+<!-- TODO: thay USERNAME bằng tên tài khoản GitHub (cũng sửa settings.siteUrl trong cv-data.js) -->
+<link rel="canonical" href="https://USERNAME.github.io/">
+<link rel="alternate" hreflang="vi" href="https://USERNAME.github.io/">
+<link rel="alternate" hreflang="en" href="https://USERNAME.github.io/?lang=en">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Trần Đình Huy — Digital Transformation Consultant · BA · IT PM">
+<meta property="og:description" content="4+ năm chuyển đổi số Y tế & Chính quyền: 60 cơ sở y tế, 58.000 người dùng khối chính quyền, 04 dự án điều phối song song.">
+<meta property="og:url" content="https://USERNAME.github.io/">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1F44'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23fff' text-anchor='middle'%3EDH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Profile | Trần Đình Huy</h1> 
-        <a href="TranDinhHuy_2026_English.pdf" class="btn-download" download>Download CV (PDF)</a>
-    </div>
 
-    <iframe src="TranDinhHuy_2026_English.pdf#toolbar=0" title="CV Preview">
-        <p>Trình duyệt của bạn không hỗ trợ xem PDF trực tiếp. 
-        <a href="TranDinhHuy_2026_English.pdf">Nhấn vào đây để tải về.</a></p>
-    </iframe>
+<!-- Nội dung dự phòng: hiện khi trình duyệt tắt JavaScript; bị thay thế ngay khi app.js chạy -->
+<div id="app">
+  <div class="fallback">
+    <h1>Trần Đình Huy</h1>
+    <p>Tư vấn Giải pháp Chuyển đổi số · Business Analyst · Quản lý Dự án CNTT — HealthTech &amp; GovTech, Đà Nẵng.</p>
+    <p><a href="mailto:tranhuy99dlk@gmail.com">tranhuy99dlk@gmail.com</a></p>
+  </div>
+</div>
+
+<!-- Bắt lỗi cú pháp trong cv-data.js để báo đúng số dòng -->
+<script>
+  window.addEventListener('error', function (e) {
+    if (e.filename && e.filename.indexOf('cv-data.js') !== -1) {
+      window.__cvDataError = e.message + ' — cv-data.js, dòng ' + e.lineno;
+    }
+  });
+</script>
+<script src="cv-data.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
